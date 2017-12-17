@@ -1,0 +1,44 @@
+{
+  "name": "replace-holder",
+  "version": "1.0.1",
+  "description": "a expanded placeholder for nodejs.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "scripts": {
+    "clean": "rimraf dist es lib",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build": "npm run clean && run-p build:**",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakuyogy/replace-holder.git"
+  },
+  "keywords": [
+    "placeholder",
+    "nodejs"
+  ],
+  "author": "gy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kakuyogy/replace-holder/issues"
+  },
+  "homepage": "https://github.com/kakuyogy/replace-holder#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "es6-promise": "^4.1.1",
+    "eslint": "^4.13.1",
+    "jest": "^21.2.1",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "through2": "^2.0.3",
+    "vinyl-fs": "^3.0.0"
+  }
+}

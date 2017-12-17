@@ -19,7 +19,10 @@ export function file(source, placeholders, dest = process.cwd(), cb = noop) {
     cb(null, f);
   }))
   .pipe(vfs.dest(dest))
-  .on('finish', (err) => {
+  .on('finish', () => {
+    cb();
+  })
+  .on('error', (err) =>{
     cb(err);
   });
 }

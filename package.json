@@ -1,6 +1,6 @@
 {
   "name": "replace-holder",
-  "version": "1.0.2",
+  "version": "1.1.7",
   "description": "a expanded placeholder for nodejs.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -10,6 +10,9 @@
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build": "npm run clean && run-p build:**",
+    "watch:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib -w",
+    "watch:es": "cross-env BABEL_ENV=es babel src --out-dir es -w",
+    "watch": "npm run clean && run-p watch:**",
     "test": "jest"
   },
   "repository": {
@@ -38,6 +41,7 @@
   },
   "dependencies": {
     "glob": "^7.1.2",
+    "mkdirp": "^0.5.1",
     "through2": "^2.0.3",
     "vinyl-fs": "^3.0.0"
   }

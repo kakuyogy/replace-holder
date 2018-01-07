@@ -120,6 +120,12 @@ function getIgnore(options) {
   };
 }
 
+export default {
+  string,
+  file,
+  fileSync,
+};
+
 function warning(matched, type) {
   // eslint-disable-next-line
   console.log(`warning: placeholder ${matched}'s value is ${type}, null character string '' will be replaced`);

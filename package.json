@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "glob": "^7.1.2",
+    "glob-base": "^0.3.0",
     "mkdirp": "^0.5.1",
     "through2": "^2.0.3",
     "vinyl-fs": "^3.0.0"
